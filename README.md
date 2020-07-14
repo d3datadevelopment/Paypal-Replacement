@@ -11,7 +11,22 @@ if the Paypal module is not used and should be removed from the shop installatio
 
     `composer require d3/oxid-paypal-replacement --update-no-dev`
     
+* OXID eShop 6.2 only:
+
+    ```
+    composer require -n oxid-esales/oxideshop-update-component --update-no-dev
+    vendor/bin/oe-console oe:module:reset-configurations
+    ```
+    
 * Manually remove the files from source/modules/oe/oepaypal.
+* OXID eShop 6.2 only:
+
+    ```
+    vendor/bin/oe-console oe:oxideshop-update-component:install-all-modules
+    vendor/bin/oe-console oe:oxideshop-update-component:transfer-module-data
+
+    composer remove -n oxid-esales/oxideshop-update-component --update-no-dev
+    ```
 
 ## Uninstall
 
