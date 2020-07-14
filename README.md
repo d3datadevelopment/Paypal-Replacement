@@ -15,6 +15,7 @@ if the Paypal module is not used and should be removed from the shop installatio
 
     ```
     composer require -n oxid-esales/oxideshop-update-component --update-no-dev
+    composer require -n oxid-esales/developer-tools --update-no-dev
     vendor/bin/oe-console oe:module:reset-configurations
     ```
     
@@ -25,6 +26,7 @@ if the Paypal module is not used and should be removed from the shop installatio
     vendor/bin/oe-console oe:oxideshop-update-component:install-all-modules
     vendor/bin/oe-console oe:oxideshop-update-component:transfer-module-data
 
+    composer remove -n oxid-esales/developer-tools --update-no-dev
     composer remove -n oxid-esales/oxideshop-update-component --update-no-dev
     ```
 
